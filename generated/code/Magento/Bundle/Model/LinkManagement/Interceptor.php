@@ -17,24 +17,6 @@ class Interceptor extends \Magento\Bundle\Model\LinkManagement implements \Magen
     /**
      * {@inheritdoc}
      */
-    public function getChildren($productSku, $optionId = null)
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getChildren');
-        return $pluginInfo ? $this->___callPlugins('getChildren', func_get_args(), $pluginInfo) : parent::getChildren($productSku, $optionId);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function addChildByProductSku($sku, $optionId, \Magento\Bundle\Api\Data\LinkInterface $linkedProduct)
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'addChildByProductSku');
-        return $pluginInfo ? $this->___callPlugins('addChildByProductSku', func_get_args(), $pluginInfo) : parent::addChildByProductSku($sku, $optionId, $linkedProduct);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function saveChild($sku, \Magento\Bundle\Api\Data\LinkInterface $linkedProduct)
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'saveChild');

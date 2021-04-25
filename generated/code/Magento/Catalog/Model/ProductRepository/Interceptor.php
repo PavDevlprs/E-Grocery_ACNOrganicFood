@@ -53,27 +53,9 @@ class Interceptor extends \Magento\Catalog\Model\ProductRepository implements \M
     /**
      * {@inheritdoc}
      */
-    public function deleteById($sku)
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'deleteById');
-        return $pluginInfo ? $this->___callPlugins('deleteById', func_get_args(), $pluginInfo) : parent::deleteById($sku);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria)
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getList');
         return $pluginInfo ? $this->___callPlugins('getList', func_get_args(), $pluginInfo) : parent::getList($searchCriteria);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function cleanCache()
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'cleanCache');
-        return $pluginInfo ? $this->___callPlugins('cleanCache', func_get_args(), $pluginInfo) : parent::cleanCache();
     }
 }

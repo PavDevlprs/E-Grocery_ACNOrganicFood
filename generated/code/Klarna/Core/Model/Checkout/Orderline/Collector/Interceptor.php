@@ -17,15 +17,6 @@ class Interceptor extends \Klarna\Core\Model\Checkout\Orderline\Collector implem
     /**
      * {@inheritdoc}
      */
-    public function getCollectors(\Magento\Store\Api\Data\StoreInterface $store)
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'getCollectors');
-        return $pluginInfo ? $this->___callPlugins('getCollectors', func_get_args(), $pluginInfo) : parent::getCollectors($store);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function isKlarnaActive($store = null)
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'isKlarnaActive');

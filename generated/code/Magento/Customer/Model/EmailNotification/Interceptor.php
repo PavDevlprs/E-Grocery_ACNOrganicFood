@@ -17,33 +17,6 @@ class Interceptor extends \Magento\Customer\Model\EmailNotification implements \
     /**
      * {@inheritdoc}
      */
-    public function credentialsChanged(\Magento\Customer\Api\Data\CustomerInterface $savedCustomer, $origCustomerEmail, $isPasswordChanged = false) : void
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'credentialsChanged');
-        $pluginInfo ? $this->___callPlugins('credentialsChanged', func_get_args(), $pluginInfo) : parent::credentialsChanged($savedCustomer, $origCustomerEmail, $isPasswordChanged);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function passwordReminder(\Magento\Customer\Api\Data\CustomerInterface $customer) : void
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'passwordReminder');
-        $pluginInfo ? $this->___callPlugins('passwordReminder', func_get_args(), $pluginInfo) : parent::passwordReminder($customer);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function passwordResetConfirmation(\Magento\Customer\Api\Data\CustomerInterface $customer) : void
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'passwordResetConfirmation');
-        $pluginInfo ? $this->___callPlugins('passwordResetConfirmation', func_get_args(), $pluginInfo) : parent::passwordResetConfirmation($customer);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function newAccount(\Magento\Customer\Api\Data\CustomerInterface $customer, $type = 'registered', $backUrl = '', $storeId = null, $sendemailStoreId = null) : void
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'newAccount');

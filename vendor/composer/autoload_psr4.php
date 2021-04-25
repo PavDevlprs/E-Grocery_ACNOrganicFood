@@ -72,6 +72,7 @@ return array(
     'OTPHP\\' => array($vendorDir . '/spomky-labs/otphp/src'),
     'MyCLabs\\Enum\\' => array($vendorDir . '/myclabs/php-enum/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Moip\\Magento2\\' => array($vendorDir . '/moip/magento2'),
     'Magento\\Wishlist\\' => array($vendorDir . '/magento/module-wishlist'),
     'Magento\\WishlistSampleData\\' => array($vendorDir . '/magento/module-wishlist-sample-data'),
     'Magento\\WishlistGraphQl\\' => array($vendorDir . '/magento/module-wishlist-graph-ql'),

@@ -67,13 +67,4 @@ class Interceptor extends \Magento\Catalog\Model\Product\Option\Repository imple
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'save');
         return $pluginInfo ? $this->___callPlugins('save', func_get_args(), $pluginInfo) : parent::save($option);
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function deleteByIdentifier($sku, $optionId)
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'deleteByIdentifier');
-        return $pluginInfo ? $this->___callPlugins('deleteByIdentifier', func_get_args(), $pluginInfo) : parent::deleteByIdentifier($sku, $optionId);
-    }
 }

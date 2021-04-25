@@ -58,13 +58,4 @@ class Interceptor extends \Magento\Sales\Model\Order\AddressRepository implement
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'save');
         return $pluginInfo ? $this->___callPlugins('save', func_get_args(), $pluginInfo) : parent::save($entity);
     }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function create()
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'create');
-        return $pluginInfo ? $this->___callPlugins('create', func_get_args(), $pluginInfo) : parent::create();
-    }
 }

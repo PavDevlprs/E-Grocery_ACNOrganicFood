@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "13845b41e917adc3d1c8ab4330e88e30",
+    "content-hash": "7b2ce78721975f8a5cc44931c171951a",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -17310,6 +17310,54 @@
                 "framework"
             ],
             "time": "2020-12-02T21:12:59+00:00"
+        },
+        {
+            "name": "moip/magento2",
+            "version": "2.0.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wirecardBrasil/magento2.git",
+                "reference": "c856d5b3c1a9e83d587065ba54a2ed8b74aa35b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wirecardBrasil/magento2/zipball/c856d5b3c1a9e83d587065ba54a2ed8b74aa35b6",
+                "reference": "c856d5b3c1a9e83d587065ba54a2ed8b74aa35b6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "magento/framework": "103.0.*",
+                "magento/module-backend": "102.0.*",
+                "magento/module-catalog": "104.0.*",
+                "magento/module-checkout": "100.4.*",
+                "magento/module-config": "101.2.*",
+                "magento/module-customer": ">=103.0.0",
+                "magento/module-directory": "100.4.*",
+                "magento/module-payment": "100.4.*",
+                "magento/module-quote": "101.2.*",
+                "magento/module-sales": "103.0.*",
+                "magento/module-theme": "101.1.*",
+                "magento/module-ui": "101.2.*",
+                "magento/module-vault": "101.2.*",
+                "php": ">=7.2"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Moip\\Magento2\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "MOIP Magento2 Extension for Magento 2 By Moip",
+            "time": "2021-04-07T14:58:48+00:00"
         },
         {
             "name": "monolog/monolog",

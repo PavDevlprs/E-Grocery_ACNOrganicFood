@@ -20246,6 +20246,56 @@
         "homepage": "http://vfs.bovigo.org/"
     },
     {
+        "name": "moip/magento2",
+        "version": "2.0.14",
+        "version_normalized": "2.0.14.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wirecardBrasil/magento2.git",
+            "reference": "c856d5b3c1a9e83d587065ba54a2ed8b74aa35b6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/wirecardBrasil/magento2/zipball/c856d5b3c1a9e83d587065ba54a2ed8b74aa35b6",
+            "reference": "c856d5b3c1a9e83d587065ba54a2ed8b74aa35b6",
+            "shasum": ""
+        },
+        "require": {
+            "ext-json": "*",
+            "magento/framework": "103.0.*",
+            "magento/module-backend": "102.0.*",
+            "magento/module-catalog": "104.0.*",
+            "magento/module-checkout": "100.4.*",
+            "magento/module-config": "101.2.*",
+            "magento/module-customer": ">=103.0.0",
+            "magento/module-directory": "100.4.*",
+            "magento/module-payment": "100.4.*",
+            "magento/module-quote": "101.2.*",
+            "magento/module-sales": "103.0.*",
+            "magento/module-theme": "101.1.*",
+            "magento/module-ui": "101.2.*",
+            "magento/module-vault": "101.2.*",
+            "php": ">=7.2"
+        },
+        "time": "2021-04-07T14:58:48+00:00",
+        "type": "magento2-module",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "registration.php"
+            ],
+            "psr-4": {
+                "Moip\\Magento2\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "OSL-3.0",
+            "AFL-3.0"
+        ],
+        "description": "MOIP Magento2 Extension for Magento 2 By Moip"
+    },
+    {
         "name": "monolog/monolog",
         "version": "1.26.0",
         "version_normalized": "1.26.0.0",

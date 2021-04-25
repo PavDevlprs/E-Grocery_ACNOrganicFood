@@ -508,6 +508,7 @@ class ComposerStaticInit5909be0f208c93cc07b066bade1cdf67
         'f1c1523a4c5d520b50bffc4a75ea5a5c' => __DIR__ . '/..' . '/magento/module-tax-sample-data/registration.php',
         'f3d4617c4b29f1082289d89745685dad' => __DIR__ . '/..' . '/magento/module-widget-sample-data/registration.php',
         '759d958743dba8d926c9111b82afe3e9' => __DIR__ . '/..' . '/magento/module-wishlist-sample-data/registration.php',
+        'c71a4221c22d75d5c1dbc15410632de6' => __DIR__ . '/..' . '/moip/magento2/registration.php',
         'b4cf39431a4b949eea8aa69ebb3d39da' => __DIR__ . '/../..' . '/app/etc/NonComposerComponentRegistration.php',
     );
 
@@ -613,6 +614,7 @@ class ComposerStaticInit5909be0f208c93cc07b066bade1cdf67
         array (
             'MyCLabs\\Enum\\' => 13,
             'Monolog\\' => 8,
+            'Moip\\Magento2\\' => 14,
             'Magento\\Wishlist\\' => 17,
             'Magento\\WishlistSampleData\\' => 27,
             'Magento\\WishlistGraphQl\\' => 24,
@@ -1361,6 +1363,10 @@ class ComposerStaticInit5909be0f208c93cc07b066bade1cdf67
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Moip\\Magento2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/moip/magento2',
         ),
         'Magento\\Wishlist\\' => 
         array (

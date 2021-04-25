@@ -44,15 +44,6 @@ class Interceptor extends \Magento\Sales\Model\Order\ItemRepository implements \
     /**
      * {@inheritdoc}
      */
-    public function deleteById($id)
-    {
-        $pluginInfo = $this->pluginList->getNext($this->subjectType, 'deleteById');
-        return $pluginInfo ? $this->___callPlugins('deleteById', func_get_args(), $pluginInfo) : parent::deleteById($id);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function save(\Magento\Sales\Api\Data\OrderItemInterface $entity)
     {
         $pluginInfo = $this->pluginList->getNext($this->subjectType, 'save');

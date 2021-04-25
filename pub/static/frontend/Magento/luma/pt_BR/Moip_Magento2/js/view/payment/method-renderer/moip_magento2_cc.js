@@ -1,0 +1,1 @@
+/var/www/html/vendor/moip/magento2/view/frontend/web/js/view/payment/method-renderer/moip_magento2_cc.js

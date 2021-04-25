@@ -1,0 +1,1 @@
+/var/www/html/vendor/amzn/amazon-pay-and-login-with-amazon-core-module/view/adminhtml/web/js/simplepath.js
