@@ -1,1 +1,0 @@
-/var/www/html/vendor/magento/module-payment/view/base/web/js/model/credit-card-validation/credit-card-number-validator/luhn10-validator.js
