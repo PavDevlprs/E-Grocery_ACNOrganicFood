@@ -1,0 +1,29 @@
+<?php
+
+use GamaAcademy\Limitation\ViewModel\LimitationViewModel;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+/**
+ * @var Template $block
+ * @var Escaper $escaper
+ * @var LimitationViewModel $viewModel
+ * @phpcs:ignoreFile
+ */
+?>
+<script>
+
+    <?php
+    
+        $viewModel = $block->getData('view_model');
+
+        if($viewModel->getCategory()->getName() == "Cestas"){
+    
+    ?>
+
+    require(['jquery', 'jquery/ui', 'domReady!'], function ($) {
+        alert("aqui");
+    });
+    
+    <?php } ?>
+
+</script>
