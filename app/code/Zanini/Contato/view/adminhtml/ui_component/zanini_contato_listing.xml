@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">zanini_contato_listing.zanini_contato_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <spinner>zanini_contato_columns</spinner>
+        <deps>
+            <dep>zanini_contato_listing.zanini_contato_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="zanini_contato_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Magento_Backend::admin</aclResource>
+        <dataProvider class="Zanini\Contato\Ui\Component\DataProvider" name="zanini_contato_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+        <bookmark name="bookmarks"/>
+        <columnsControls name="columns_controls"/>
+        <filterSearch name="fulltext"/>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="zanini_contato_columns">
+        <selectionsColumn name="ids">
+            <settings>
+                <indexField>id</indexField>
+            </settings>
+        </selectionsColumn>
+        <column name="id">
+            <settings>
+                <filter>textRange</filter>
+                <label translate="true">ID</label>
+                <sorting>asc</sorting>
+            </settings>
+        </column>
+        <column name="nome">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Nome do contatante</label>
+            </settings>
+        </column>
+        <column name="email">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">E-mail</label>
+            </settings>
+        </column>
+        <column name="conteudo">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Mensagem</label>
+            </settings>
+        </column>
+        <column name="data_criacao" class="Magento\Ui\Component\Listing\Columns\Date" component="Magento_Ui/js/grid/columns/date">
+            <settings>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <label translate="true">Data de envio</label>
+            </settings>
+        </column>
+    </columns>
+</listing>

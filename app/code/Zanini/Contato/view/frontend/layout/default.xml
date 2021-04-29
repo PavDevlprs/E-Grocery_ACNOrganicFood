@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="//www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.links">
+            <block class="Zanini\Contato\Block\Contato" name="contato_link" >
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Dúvidas? Entre em contato conosco!</argument>
+                    <argument name="path" xsi:type="string">novo/contato/contatar</argument>
+                </arguments>
+            </block>
+            <block class="Zanini\Contato\Block\Lojas" name="lojas_link" >
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Acesse nossos pontos físicos pela cidade</argument>
+                    <argument name="path" xsi:type="string">visualizar/lojas/exibir</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

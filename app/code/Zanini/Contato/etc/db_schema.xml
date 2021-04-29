@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="acn_egrocery_contato" resource="default" engine="innodb" comment="Contato">
+
+        <column
+            xsi:type="smallint"
+            name="id"
+            unsigned="false"
+            nullable="false"
+            identity="true"
+            comment="Entity ID"
+        />
+
+        <column
+            xsi:type="varchar"
+            name="nome"
+            nullable="false"
+            length="255"
+            comment="Nome"
+        />
+
+        <column
+            xsi:type="varchar"
+            name="email"
+            nullable="false"
+            length="255"
+            comment="Email"
+        />
+
+        <column
+            xsi:type="text"
+            name="conteudo"
+            nullable="false"
+            comment="Conteudo"
+        />
+
+        <column
+            xsi:type="timestamp"
+            name="data_criacao"
+            on_update="false"
+            nullable="true"
+            default="CURRENT_TIMESTAMP"
+            comment="Block Creation Time"
+        />
+
+        <column
+            xsi:type="timestamp"
+            name="data_atualizacao"
+            on_update="true"
+            nullable="true"
+            default="CURRENT_TIMESTAMP"
+            comment="Block Modification Time"
+        />
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id" />
+        </constraint>
+        <index referenceId="ZANINI_ID" indexType="fulltext">
+            <column name="nome" />
+        </index>
+    </table>
+</schema>

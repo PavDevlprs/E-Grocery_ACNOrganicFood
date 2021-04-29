@@ -1,0 +1,18 @@
+{
+    "acn_egrocery_contato": {
+        "column": {
+            "id": true,
+            "nome": true,
+            "email": true,
+            "conteudo": true,
+            "data_criacao": true,
+            "data_atualizacao": true
+        },
+        "index": {
+            "ACN_EGROCERY_CONTATO_NOME": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
