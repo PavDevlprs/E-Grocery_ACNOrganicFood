@@ -1,0 +1,78 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+
+<form id="contato-form" method="post" class="form create contato form-create-contato">
+    <!-- form key -->
+    <?= /* @noEscape */ $block->getBlockHtml('formkey') ?>
+
+    <fieldset class="fieldset create info">
+        <h2><strong>Contate-nos</strong></h2>
+        <div class="field nome required">
+            <label for="nome" class="label">
+                <span><?= $escaper->escapeHtml(__('Nome')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text"
+                       name="nome"
+                       title="<?= $escaper->escapeHtmlAttr(__('Nome')) ?>"
+                       id="nome"
+                       class="input-text"
+                       data-validate="{required:true}"
+                       placeholder="Seu nome">
+            </div>
+        </div>
+        <div class="field email required">
+            <label for="email" class="label">
+                <span><?= $escaper->escapeHtml(__('E-mail')) ?></span>
+            </label>
+            <div class="control">
+                <input type="text"
+                       name="email"
+                       title="<?= $escaper->escapeHtmlAttr(__('E-mail')) ?>"
+                       id="email"
+                       class="input-text"
+                       data-validate="{required:true}"
+                       placeholder="Seu e-mail">
+            </div>
+        </div>
+        <hr>
+        <div class="field conteudo required">
+            <label for="conteudo" class="label">
+                <span><?= $escaper->escapeHtml(__('Mensagem')) ?></span>
+            </label>
+            <div class="control">
+                <textarea id="conteudo"
+                          name="conteudo"
+                          rows="10"
+                          cols="50"
+                          title="<?= $escaper->escapeHtmlAttr(__('Mensagem')) ?>"
+                          class="textarea-example-1"
+                          data-validate="{required:true}"
+                          placeholder="Informe sua mensagem..."></textarea>
+            </div>
+        </div>
+    </fieldset>
+
+    <!-- botoes -->
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit"
+                    class="action submit primary"
+                    title="<?= $escaper->escapeHtmlAttr(__('Enviar')) ?>">
+                <span><?= $escaper->escapeHtml(__('Enviar')) ?></span>
+            </button>
+        </div>
+    </div>
+</form>
+
+<script>
+    require([
+        'jquery',
+        'mage/mage'
+    ], function($) {
+        var dataForm = $('#contato-form');
+        dataForm.mage('validation', {});
+    });
+</script>

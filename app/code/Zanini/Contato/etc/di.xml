@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Zanini\Contato\Api\Data\ContatoInterface" type="Zanini\Contato\Model\Contato" />
+    <preference for="Zanini\Contato\Api\ContatoRepositoryInterface" type="Zanini\Contato\Model\ContatoRepository" />
+    <preference for="Zanini\Contato\Api\Data\ContatoSearchResultsInterface" type="Zanini\Contato\Model\ContatoSearchResults" />
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="zanini_contato_listing_data_source" xsi:type="string">ZaniniContatoSearchResult</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="ZaniniContatoSearchResult" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">acn_egrocery_contato</argument>
+            <argument name="resourceModel" xsi:type="string">Zanini\Contato\Model\ResourceModel\Contato</argument>
+        </arguments>
+    </virtualType>
+</config>

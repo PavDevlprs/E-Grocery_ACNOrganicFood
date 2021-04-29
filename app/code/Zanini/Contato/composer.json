@@ -1,0 +1,21 @@
+{
+    "name": "zanini/module-contato",
+    "description": "Contact Module",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "otavio.zaninii@gmail.com",
+            "name": "Otavio Zanini"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Zanini\\Contato\\": ""
+        }
+    }
+}
