@@ -3,20 +3,19 @@ namespace GamaAcademy\Limitation\ViewModel;
 
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 
-class LimitationViewModel implements ArgumentInterface{
-    private $resource;
+class LimitationViewModel implements ArgumentInterface
+{
 
-    public function __construct()
+    public function __construct(\Magento\Framework\Registry $registry)
     {
-        
+        $this->registry = $registry;
     }
 
-    public function getCategory()
+    public function getProduct()
     {
     
-        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-        $category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');
+        $product = $this->registry->registry('current_product');
         
-        return $category;
+        return $product;
     }
 }

@@ -1,29 +1,60 @@
 <?php
-
-use GamaAcademy\Limitation\ViewModel\LimitationViewModel;
-use Magento\Framework\Escaper;
-use Magento\Framework\View\Element\Template;
 /**
- * @var Template $block
- * @var Escaper $escaper
- * @var LimitationViewModel $viewModel
- * @phpcs:ignoreFile
+ * @var $block \Magento\Framework\View\Element\Template
+ * @var $viewModel \GamaAcademy\Limitation\ViewModel\MyViewModel
  */
+$viewModel = $this->getData('view_model');
+
+if(strpos($viewModel->getProduct()->getName(), 'Personalizada') == true){
+$qtd_total = preg_replace('/[^0-9.]+/', '', $viewModel->getProduct()->getName());
 ?>
+<style>
+    .btn{
+        float: right;
+        background-color: forestgreen;
+        width: 30%;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+    }
+</style>
 <script>
-
-    <?php
-    
-        $viewModel = $block->getData('view_model');
-
-        if($viewModel->getCategory()->getName() == "Cestas"){
-    
-    ?>
-
+    var  qtd_total = parseInt('<?= $qtd_total ?>')
+    var  qtd_produtos = 0
     require(['jquery', 'jquery/ui', 'domReady!'], function ($) {
-        alert("aqui");
+        $('input.qty').attr('max', qtd_total)
+        $('input.qty').bind('keyup mouseup', function(){
+            if(parseInt($(this).val()) < qtd_total && qtd_produtos < qtd_total){
+                $('input.qty').prop('disabled',false)
+                qtd_produtos = 0
+                $('input.qty').toArray().forEach( (el) => {
+                    qtd_produtos += parseInt($(el).val())
+                })
+                if(qtd_produtos == qtd_total){
+                    alert("Quantidade não permitida pelo tamanho da cesta")
+                    $('input.qty').prop('disabled',true)
+                    $('.product-add-form').prepend(`<div class="btn" id="btnLimpar" onclick="limpaCampos()">Limpa valores</div>`)    
+                }
+            }else{
+                alert("Quantidade não permitida pelo tamanho da cesta")
+                $('input.qty').prop('disabled',true)
+                $('.product-add-form').prepend(`<div class="btn" id="btnLimpar" onclick="limpaCampos()">Limpa valores</div>`)
+            }
+        })
     });
     
-    <?php } ?>
+    function limpaCampos(){
+        document.getElementById('product_addtocart_form').reset();
+        var inputs = document.getElementsByTagName("input"); 
+        for (var i = 0; i < inputs.length; i++) { 
+            inputs[i].disabled = false;
+        } 
+        qtd_produtos = 0
+        var btnLimpar = document.getElementById("btnLimpar");
+        btnLimpar.remove();
+    }
 
 </script>
+<?php } else {
+
+} ?>
