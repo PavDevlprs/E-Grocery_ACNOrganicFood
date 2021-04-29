@@ -118,7 +118,7 @@ CREATE TABLE `admin_system_messages` (
 
 LOCK TABLES `admin_system_messages` WRITE;
 /*!40000 ALTER TABLE `admin_system_messages` DISABLE KEYS */;
-INSERT INTO `admin_system_messages` VALUES ('c79237a69f9c7b43241a29075febea12',1,'2021-04-29 03:18:29'),('da332d712f3215b9b94bfa268c398323',2,'2021-04-26 20:32:50');
+INSERT INTO `admin_system_messages` VALUES ('da332d712f3215b9b94bfa268c398323',2,'2021-04-26 20:32:50');
 /*!40000 ALTER TABLE `admin_system_messages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,7 +161,7 @@ CREATE TABLE `admin_user` (
 
 LOCK TABLES `admin_user` WRITE;
 /*!40000 ALTER TABLE `admin_user` DISABLE KEYS */;
-INSERT INTO `admin_user` VALUES (1,'Pav','Devs','magento2.grupo2@gmail.com','admin','a1aebbcacdfe67c62b44e772f5f0abfe98478c728171bba82fcf5712e90640c8:GPLhuVwUDhVzXdsIo8pcrKx4CvVdgx9w:3_32_2_67108864','2021-04-22 01:46:02','2021-04-29 03:06:52','2021-04-29 03:06:52',14,0,1,'{\"configState\":{\"catalog_navigation\":\"1\",\"catalog_fields_masks\":\"0\",\"catalog_frontend\":\"0\",\"catalog_review\":\"0\",\"catalog_productalert\":\"0\",\"catalog_productalert_cron\":\"0\",\"catalog_placeholder\":\"0\",\"catalog_recently_products\":\"0\",\"catalog_product_video\":\"0\",\"catalog_price\":\"0\",\"catalog_layered_navigation\":\"0\",\"catalog_search\":\"0\",\"catalog_seo\":\"0\",\"catalog_downloadable\":\"0\",\"catalog_custom_options\":\"0\",\"rss_order\":\"1\",\"rss_config\":\"1\",\"rss_wishlist\":\"1\",\"rss_catalog\":\"1\",\"contact_email\":\"1\",\"contact_contact\":\"0\",\"reports_options\":\"1\",\"trans_email_ident_custom1\":\"0\",\"trans_email_ident_general\":\"0\",\"trans_email_ident_support\":\"0\",\"system_smtp\":\"1\",\"system_adminnotification\":\"1\",\"system_mysqlmq\":\"0\",\"system_cron\":\"0\",\"system_currency\":\"1\",\"system_backup\":\"0\",\"system_full_page_cache\":\"0\",\"system_bulk\":\"0\",\"system_media_storage_configuration\":\"0\",\"system_upload_configuration\":\"0\",\"system_media_gallery\":\"0\",\"system_media_gallery_renditions\":\"0\",\"system_adobe_stock_integration\":\"0\",\"smtp_general\":\"1\",\"smtp_configuration_option\":\"1\",\"smtp_developer\":\"0\"}}',NULL,NULL,'en_US',0,NULL,NULL,NULL);
+INSERT INTO `admin_user` VALUES (1,'Pav','Devs','magento2.grupo2@gmail.com','admin','a1aebbcacdfe67c62b44e772f5f0abfe98478c728171bba82fcf5712e90640c8:GPLhuVwUDhVzXdsIo8pcrKx4CvVdgx9w:3_32_2_67108864','2021-04-22 01:46:02','2021-04-29 03:43:47','2021-04-29 03:43:47',15,0,1,'{\"configState\":{\"catalog_navigation\":\"1\",\"catalog_fields_masks\":\"0\",\"catalog_frontend\":\"0\",\"catalog_review\":\"0\",\"catalog_productalert\":\"0\",\"catalog_productalert_cron\":\"0\",\"catalog_placeholder\":\"0\",\"catalog_recently_products\":\"0\",\"catalog_product_video\":\"0\",\"catalog_price\":\"0\",\"catalog_layered_navigation\":\"0\",\"catalog_search\":\"0\",\"catalog_seo\":\"0\",\"catalog_downloadable\":\"0\",\"catalog_custom_options\":\"0\",\"rss_order\":\"1\",\"rss_config\":\"1\",\"rss_wishlist\":\"1\",\"rss_catalog\":\"1\",\"contact_email\":\"1\",\"contact_contact\":\"0\",\"reports_options\":\"1\",\"trans_email_ident_custom1\":\"0\",\"trans_email_ident_general\":\"0\",\"trans_email_ident_support\":\"0\",\"system_smtp\":\"1\",\"system_adminnotification\":\"1\",\"system_mysqlmq\":\"0\",\"system_cron\":\"0\",\"system_currency\":\"1\",\"system_backup\":\"0\",\"system_full_page_cache\":\"0\",\"system_bulk\":\"0\",\"system_media_storage_configuration\":\"0\",\"system_upload_configuration\":\"0\",\"system_media_gallery\":\"0\",\"system_media_gallery_renditions\":\"0\",\"system_adobe_stock_integration\":\"0\",\"smtp_general\":\"1\",\"smtp_configuration_option\":\"1\",\"smtp_developer\":\"0\"}}',NULL,NULL,'en_US',0,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `admin_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -208,7 +208,7 @@ CREATE TABLE `admin_user_session` (
   KEY `ADMIN_USER_SESSION_SESSION_ID` (`session_id`),
   KEY `ADMIN_USER_SESSION_USER_ID` (`user_id`),
   CONSTRAINT `ADMIN_USER_SESSION_USER_ID_ADMIN_USER_USER_ID` FOREIGN KEY (`user_id`) REFERENCES `admin_user` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COMMENT='Admin User sessions table';
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='Admin User sessions table';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,7 +217,7 @@ CREATE TABLE `admin_user_session` (
 
 LOCK TABLES `admin_user_session` WRITE;
 /*!40000 ALTER TABLE `admin_user_session` DISABLE KEYS */;
-INSERT INTO `admin_user_session` VALUES (1,'mkgblghpjioiqqqj670110of0e',1,0,'2021-04-22 02:42:15','2021-04-22 02:42:45','172.22.0.3'),(2,'gdab8ebn7pqv50v7k368t27p8i',1,1,'2021-04-22 14:11:13','2021-04-22 14:13:10','172.22.0.2'),(3,'t4pphhh1peifvu4dq7hihks5al',1,1,'2021-04-22 17:23:13','2021-04-22 17:23:45','172.22.0.2'),(4,'dm77h4ra2l311367mqt683mr45',1,1,'2021-04-25 13:55:35','2021-04-25 13:55:35','172.22.0.4'),(5,'dqkfcer8mvb6ft4ocq41joulvp',1,1,'2021-04-25 14:11:35','2021-04-25 16:54:17','172.22.0.4'),(6,'89j41s5lkok6v16acmqfdta3ms',1,1,'2021-04-25 17:31:43','2021-04-25 17:31:43','172.22.0.4'),(7,'o4d7merdbjg4mcl9lj0qamja3g',1,1,'2021-04-25 18:10:05','2021-04-25 19:56:41','172.22.0.4'),(8,'5d01697grbp169dm0qg2a6c0gp',1,1,'2021-04-25 20:15:14','2021-04-25 21:54:38','172.22.0.4'),(9,'53hvv6h21furnr3gepioforrft',1,1,'2021-04-26 20:20:36','2021-04-26 21:29:26','172.22.0.3'),(10,'kl1qt9mk3sdvi46ghrdtcc17sv',1,1,'2021-04-27 21:40:44','2021-04-27 21:45:33','172.22.0.2'),(11,'2tllvletaon7cd3ucm3hurh6en',1,1,'2021-04-28 20:20:56','2021-04-28 20:25:43','172.22.0.2'),(12,'53g6q5ugimj59c9ko2rjet7hcc',1,1,'2021-04-28 20:41:03','2021-04-28 20:43:38','172.22.0.2'),(13,'c4ijprisfpv2udlv6f3kort3pp',1,1,'2021-04-29 00:55:03','2021-04-29 01:24:50','172.22.0.2'),(14,'kssd7sp2s3hvl8jhfglgfb4619',1,1,'2021-04-29 03:06:52','2021-04-29 03:18:28','172.22.0.2');
+INSERT INTO `admin_user_session` VALUES (1,'mkgblghpjioiqqqj670110of0e',1,0,'2021-04-22 02:42:15','2021-04-22 02:42:45','172.22.0.3'),(2,'gdab8ebn7pqv50v7k368t27p8i',1,1,'2021-04-22 14:11:13','2021-04-22 14:13:10','172.22.0.2'),(3,'t4pphhh1peifvu4dq7hihks5al',1,1,'2021-04-22 17:23:13','2021-04-22 17:23:45','172.22.0.2'),(4,'dm77h4ra2l311367mqt683mr45',1,1,'2021-04-25 13:55:35','2021-04-25 13:55:35','172.22.0.4'),(5,'dqkfcer8mvb6ft4ocq41joulvp',1,1,'2021-04-25 14:11:35','2021-04-25 16:54:17','172.22.0.4'),(6,'89j41s5lkok6v16acmqfdta3ms',1,1,'2021-04-25 17:31:43','2021-04-25 17:31:43','172.22.0.4'),(7,'o4d7merdbjg4mcl9lj0qamja3g',1,1,'2021-04-25 18:10:05','2021-04-25 19:56:41','172.22.0.4'),(8,'5d01697grbp169dm0qg2a6c0gp',1,1,'2021-04-25 20:15:14','2021-04-25 21:54:38','172.22.0.4'),(9,'53hvv6h21furnr3gepioforrft',1,1,'2021-04-26 20:20:36','2021-04-26 21:29:26','172.22.0.3'),(10,'kl1qt9mk3sdvi46ghrdtcc17sv',1,1,'2021-04-27 21:40:44','2021-04-27 21:45:33','172.22.0.2'),(11,'2tllvletaon7cd3ucm3hurh6en',1,1,'2021-04-28 20:20:56','2021-04-28 20:25:43','172.22.0.2'),(12,'53g6q5ugimj59c9ko2rjet7hcc',1,1,'2021-04-28 20:41:03','2021-04-28 20:43:38','172.22.0.2'),(13,'c4ijprisfpv2udlv6f3kort3pp',1,1,'2021-04-29 00:55:03','2021-04-29 01:24:50','172.22.0.2'),(14,'kssd7sp2s3hvl8jhfglgfb4619',1,1,'2021-04-29 03:06:52','2021-04-29 03:18:28','172.22.0.2'),(15,'e3kikfitl16n56kgsto03nd6n8',1,1,'2021-04-29 03:43:47','2021-04-29 03:59:30','172.22.0.2');
 /*!40000 ALTER TABLE `admin_user_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6473,7 +6473,7 @@ CREATE TABLE `indexer_state` (
 
 LOCK TABLES `indexer_state` WRITE;
 /*!40000 ALTER TABLE `indexer_state` DISABLE KEYS */;
-INSERT INTO `indexer_state` VALUES (1,'design_config_grid','valid','2021-04-29 03:18:53','3beb5e687b303dc0a23518c6f6f11fd9'),(2,'customer_grid','valid','2021-04-25 21:09:30','f68909a68ba965be4318a7ed4a49a228'),(3,'catalog_category_product','valid','2021-04-25 19:24:16','dee693bd5068a0df04886b7249db8942'),(4,'catalog_product_category','valid','2021-04-25 19:24:16','772152b2a86921211c709fbbf52de6cf'),(5,'catalogrule_rule','valid','2021-04-25 19:24:17','244ce90906ef892fb86401a15bf4d96a'),(6,'catalog_product_attribute','invalid','2021-04-26 20:32:50','63d917e8de31e36dd02d2bf57f658d6a'),(7,'cataloginventory_stock','valid','2021-04-25 19:24:17','2a2aeebf895d9fb5860fe8248961d407'),(8,'inventory','valid','2021-04-25 19:24:17','391e978ba9e08a90651d75e490e4ef6c'),(9,'catalogrule_product','valid','2021-04-25 19:24:17','6f3b29dfe158c570509e28684be22476'),(10,'catalog_product_price','valid','2021-04-25 19:24:17','033c3402b3f6228c7b65990e79e7a2e3'),(11,'catalogsearch_fulltext','valid','2021-04-25 19:24:19','5b6d2776bce162e1417b66405cf000d0');
+INSERT INTO `indexer_state` VALUES (1,'design_config_grid','valid','2021-04-29 20:16:11','3beb5e687b303dc0a23518c6f6f11fd9'),(2,'customer_grid','valid','2021-04-25 21:09:30','f68909a68ba965be4318a7ed4a49a228'),(3,'catalog_category_product','valid','2021-04-25 19:24:16','dee693bd5068a0df04886b7249db8942'),(4,'catalog_product_category','valid','2021-04-25 19:24:16','772152b2a86921211c709fbbf52de6cf'),(5,'catalogrule_rule','valid','2021-04-25 19:24:17','244ce90906ef892fb86401a15bf4d96a'),(6,'catalog_product_attribute','invalid','2021-04-26 20:32:50','63d917e8de31e36dd02d2bf57f658d6a'),(7,'cataloginventory_stock','valid','2021-04-25 19:24:17','2a2aeebf895d9fb5860fe8248961d407'),(8,'inventory','valid','2021-04-25 19:24:17','391e978ba9e08a90651d75e490e4ef6c'),(9,'catalogrule_product','valid','2021-04-25 19:24:17','6f3b29dfe158c570509e28684be22476'),(10,'catalog_product_price','valid','2021-04-25 19:24:17','033c3402b3f6228c7b65990e79e7a2e3'),(11,'catalogsearch_fulltext','valid','2021-04-25 19:24:19','5b6d2776bce162e1417b66405cf000d0');
 /*!40000 ALTER TABLE `indexer_state` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -13291,4 +13291,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-29  3:39:56
+-- Dump completed on 2021-04-29 20:18:04
