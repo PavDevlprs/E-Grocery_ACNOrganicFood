@@ -6473,7 +6473,7 @@ CREATE TABLE `indexer_state` (
 
 LOCK TABLES `indexer_state` WRITE;
 /*!40000 ALTER TABLE `indexer_state` DISABLE KEYS */;
-INSERT INTO `indexer_state` VALUES (1,'design_config_grid','valid','2021-04-29 20:16:11','3beb5e687b303dc0a23518c6f6f11fd9'),(2,'customer_grid','valid','2021-04-25 21:09:30','f68909a68ba965be4318a7ed4a49a228'),(3,'catalog_category_product','valid','2021-04-25 19:24:16','dee693bd5068a0df04886b7249db8942'),(4,'catalog_product_category','valid','2021-04-25 19:24:16','772152b2a86921211c709fbbf52de6cf'),(5,'catalogrule_rule','valid','2021-04-25 19:24:17','244ce90906ef892fb86401a15bf4d96a'),(6,'catalog_product_attribute','invalid','2021-04-26 20:32:50','63d917e8de31e36dd02d2bf57f658d6a'),(7,'cataloginventory_stock','valid','2021-04-25 19:24:17','2a2aeebf895d9fb5860fe8248961d407'),(8,'inventory','valid','2021-04-25 19:24:17','391e978ba9e08a90651d75e490e4ef6c'),(9,'catalogrule_product','valid','2021-04-25 19:24:17','6f3b29dfe158c570509e28684be22476'),(10,'catalog_product_price','valid','2021-04-25 19:24:17','033c3402b3f6228c7b65990e79e7a2e3'),(11,'catalogsearch_fulltext','valid','2021-04-25 19:24:19','5b6d2776bce162e1417b66405cf000d0');
+INSERT INTO `indexer_state` VALUES (1,'design_config_grid','valid','2021-04-29 20:20:46','3beb5e687b303dc0a23518c6f6f11fd9'),(2,'customer_grid','valid','2021-04-25 21:09:30','f68909a68ba965be4318a7ed4a49a228'),(3,'catalog_category_product','valid','2021-04-25 19:24:16','dee693bd5068a0df04886b7249db8942'),(4,'catalog_product_category','valid','2021-04-25 19:24:16','772152b2a86921211c709fbbf52de6cf'),(5,'catalogrule_rule','valid','2021-04-25 19:24:17','244ce90906ef892fb86401a15bf4d96a'),(6,'catalog_product_attribute','invalid','2021-04-26 20:32:50','63d917e8de31e36dd02d2bf57f658d6a'),(7,'cataloginventory_stock','valid','2021-04-25 19:24:17','2a2aeebf895d9fb5860fe8248961d407'),(8,'inventory','valid','2021-04-25 19:24:17','391e978ba9e08a90651d75e490e4ef6c'),(9,'catalogrule_product','valid','2021-04-25 19:24:17','6f3b29dfe158c570509e28684be22476'),(10,'catalog_product_price','valid','2021-04-25 19:24:17','033c3402b3f6228c7b65990e79e7a2e3'),(11,'catalogsearch_fulltext','valid','2021-04-25 19:24:19','5b6d2776bce162e1417b66405cf000d0');
 /*!40000 ALTER TABLE `indexer_state` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -13291,4 +13291,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-29 20:18:04
+-- Dump completed on 2021-04-29 20:21:07

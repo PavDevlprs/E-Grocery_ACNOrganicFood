@@ -14,6 +14,7 @@
     "require": {
         "magento/composer-root-update-plugin": "~1.1",
         "magento/product-community-edition": "2.4.2",
+        "mageplaza/module-smtp": "^4.3",
         "wolfsellers/module-enabledisabletfa": "^1.0"
     },
     "autoload": {
