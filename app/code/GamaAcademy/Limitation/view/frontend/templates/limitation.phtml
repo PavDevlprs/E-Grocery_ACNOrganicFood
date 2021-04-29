@@ -17,6 +17,10 @@ $qtd_total = preg_replace('/[^0-9.]+/', '', $viewModel->getProduct()->getName())
         color: white;
         border-radius: 10px;
     }
+
+    .unclickable{
+        pointer-events: none;
+    }
 </style>
 <script>
     var  qtd_total = parseInt('<?= $qtd_total ?>')
@@ -25,19 +29,21 @@ $qtd_total = preg_replace('/[^0-9.]+/', '', $viewModel->getProduct()->getName())
         $('input.qty').attr('max', qtd_total)
         $('input.qty').bind('keyup mouseup', function(){
             if(parseInt($(this).val()) < qtd_total && qtd_produtos < qtd_total){
-                $('input.qty').prop('disabled',false)
+                $('input.qty').prop('readonly',false)
                 qtd_produtos = 0
                 $('input.qty').toArray().forEach( (el) => {
                     qtd_produtos += parseInt($(el).val())
                 })
                 if(qtd_produtos == qtd_total){
                     alert("Quantidade não permitida pelo tamanho da cesta")
-                    $('input.qty').prop('disabled',true)
+                    $('input.qty').prop('readonly',true)
+                    $('input.qty').addClass('unclickable')
                     $('.product-add-form').prepend(`<div class="btn" id="btnLimpar" onclick="limpaCampos()">Limpa valores</div>`)    
                 }
             }else{
                 alert("Quantidade não permitida pelo tamanho da cesta")
-                $('input.qty').prop('disabled',true)
+                $('input.qty').prop('readonly',true)
+                $('input.qty').addClass('unclickable')
                 $('.product-add-form').prepend(`<div class="btn" id="btnLimpar" onclick="limpaCampos()">Limpa valores</div>`)
             }
         })
@@ -47,7 +53,8 @@ $qtd_total = preg_replace('/[^0-9.]+/', '', $viewModel->getProduct()->getName())
         document.getElementById('product_addtocart_form').reset();
         var inputs = document.getElementsByTagName("input"); 
         for (var i = 0; i < inputs.length; i++) { 
-            inputs[i].disabled = false;
+            inputs[i].readonly = false;
+            inputs[i].classList.remove('unclickable');
         } 
         qtd_produtos = 0
         var btnLimpar = document.getElementById("btnLimpar");
